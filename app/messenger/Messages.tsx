@@ -23,14 +23,14 @@ const Messages: FC<IMessagesProps> = ({ messages, user }) => {
                         key={i}
                         className={`mb-4 max-sm:mb-1 flex flex-col ${itsMe && "self-end"}`}
                     >
-                        <div className="text-gray-600 px-2 py-1">
+                        <div className="text-gray-800 dark:text-gray-600 px-2 py-1">
                             {message.user.name}
                         </div>
                         <div
-                            className={`rounded-md px-3 py-2 w-fit ${
+                            className={`rounded-md px-3 py-2 w-fit md:max-w-4xl ${
                                 itsMe
-                                    ? "self-end bg-blue-700 rounded-br-none"
-                                    : "bg-gray-600 rounded-bl-none"
+                                    ? "self-end bg-blue-400 dark:bg-blue-700 rounded-br-none text-white dark:text-black"
+                                    : "bg-gray-400 dark:bg-gray-600 rounded-bl-none"
                             }`}
                         >
                             {message.text}
