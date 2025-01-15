@@ -1,12 +1,12 @@
+import Messenger from "~/messenger/Messenger";
 import type { Route } from "./+types/home";
-import Main from "~/main/Main";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "XChat | Home" }
+    { title: "XChat | Messenger" }
   ];
 }
 
 export default function Home() {
-  return <Main />;
+  return <Messenger />;
 }

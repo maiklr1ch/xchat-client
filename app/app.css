@@ -2,11 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply transition;
+}
+
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-blue-500 dark:bg-blue-800 h-full;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+}
+
+.wrap {
+  @apply flex flex-col justify-center items-center;
+}
+
+::-webkit-scrollbar {
+  @apply w-3;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-md bg-gray-600 hover:bg-gray-500 cursor-pointer
 }
